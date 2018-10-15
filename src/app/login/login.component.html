@@ -12,24 +12,20 @@
       <mat-form-field>
         <input matInput placeholder="Username" formControlName="usernameField" required>
         <mat-error *ngIf="formCont.usernameField.invalid">
-        <!-- && (formCont.usernameField.dirty || formCont.usernameField.touched) -->
           {{getErrorMessage('usernameField')}}
         </mat-error>
-      
       </mat-form-field>
 
-      <mat-form-field>
-          <input matInput placeholder="Password" formControlName="passwordField" type="password" required>
-          <mat-error *ngIf="formCont.passwordField.invalid">
-            {{getErrorMessage('passwordField')}}
-          </mat-error>
-      </mat-form-field>
-
-      
-    
+     <mat-form-field>
+      <input matInput placeholder="Password" formControlName="passwordField" type="password" required>
+      <mat-error *ngIf="formCont.passwordField.invalid">
+        {{getErrorMessage('passwordField')}}
+      </mat-error>
+    </mat-form-field>
+   
     <mat-card-actions>
     <button type="submit" [disabled]="loading || loginForm.invalid" mat-raised-button color="primary">Login</button>
-    <!--here -->
+    <!-- animated icon can be added here -->
     </mat-card-actions>
 
     </form>
@@ -37,7 +33,6 @@
 
  </mat-card>
  
-
 <!-- DEBUG -->
 <!--  {{userService.user | json}} -->
 <!--
